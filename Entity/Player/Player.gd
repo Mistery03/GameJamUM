@@ -1,11 +1,22 @@
-extends Node
+class_name Player
+extends Entity
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@onready var animation = $Animation
+@onready var state_manager = $StateManager
+@onready var camera = $Camera
+@onready var move_component = $moveComponent
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _ready() -> void:
+	state_manager.init(self,animation,move_component,camera)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	state_manager.process_input(event)
+
+func _physics_process(delta: float) -> void:
+	state_manager.process_physics(delta)
+
+func _process(delta: float) -> void:
+	state_manager.process_frame(delta)
