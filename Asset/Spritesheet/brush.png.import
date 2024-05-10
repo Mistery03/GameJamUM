@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp4x2rpf4cxue"
-path="res://.godot/imported/brush.png-dbd4b879fc480d070873f9aaca266e3e.ctex"
+path="res://.godot/imported/brush.png-5b75131f0836f05d0331eaad77fa612b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/spritesheets/brush.png"
-dest_files=["res://.godot/imported/brush.png-dbd4b879fc480d070873f9aaca266e3e.ctex"]
+source_file="res://Asset/Spritesheet/brush.png"
+dest_files=["res://.godot/imported/brush.png-5b75131f0836f05d0331eaad77fa612b.ctex"]
 
 [params]
 

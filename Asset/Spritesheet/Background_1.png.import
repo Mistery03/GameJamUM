@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bllii52wkbi6h"
-path="res://.godot/imported/Salt.png-88b794b5efa351e1f995c61c88bbea93.ctex"
+uid="uid://dxp2h665ymx5x"
+path="res://.godot/imported/Background_1.png-a6372327f440dbb8e137e19f1fd39265.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/spritesheets/Salt.png"
-dest_files=["res://.godot/imported/Salt.png-88b794b5efa351e1f995c61c88bbea93.ctex"]
+source_file="res://Asset/Spritesheet/Background_1.png"
+dest_files=["res://.godot/imported/Background_1.png-a6372327f440dbb8e137e19f1fd39265.ctex"]
 
 [params]
 
