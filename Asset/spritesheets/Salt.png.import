@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgq2vebd75if0"
-path="res://.godot/imported/tileset grass platform.png-917b1d8cc8a479f8abd743b50935119d.ctex"
+uid="uid://bllii52wkbi6h"
+path="res://.godot/imported/Salt.png-88b794b5efa351e1f995c61c88bbea93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/spritesheets/tileset grass platform.png"
-dest_files=["res://.godot/imported/tileset grass platform.png-917b1d8cc8a479f8abd743b50935119d.ctex"]
+source_file="res://Asset/spritesheets/Salt.png"
+dest_files=["res://.godot/imported/Salt.png-88b794b5efa351e1f995c61c88bbea93.ctex"]
 
 [params]
 

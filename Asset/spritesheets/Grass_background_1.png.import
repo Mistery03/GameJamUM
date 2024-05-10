@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ictpwp6rsvv5"
-path="res://.godot/imported/plants silhouette hanging.png-a784484a8ce1611c9e551974666f7b11.ctex"
+uid="uid://bfbhw5ytol7hq"
+path="res://.godot/imported/Grass_background_1.png-5cfe97746786148863dee8c092aa415b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/spritesheets/plants silhouette hanging.png"
-dest_files=["res://.godot/imported/plants silhouette hanging.png-a784484a8ce1611c9e551974666f7b11.ctex"]
+source_file="res://Asset/spritesheets/Grass_background_1.png"
+dest_files=["res://.godot/imported/Grass_background_1.png-5cfe97746786148863dee8c092aa415b.ctex"]
 
 [params]
 

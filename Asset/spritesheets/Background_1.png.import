@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buq5dxd7vijov"
-path="res://.godot/imported/big plants.png-401d99ac5233e182fac45d9e2dde4a7c.ctex"
+uid="uid://dxp2h665ymx5x"
+path="res://.godot/imported/Background_1.png-50c7be6cc98fc59112270fc4a1904fc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/spritesheets/big plants.png"
-dest_files=["res://.godot/imported/big plants.png-401d99ac5233e182fac45d9e2dde4a7c.ctex"]
+source_file="res://Asset/spritesheets/Background_1.png"
+dest_files=["res://.godot/imported/Background_1.png-50c7be6cc98fc59112270fc4a1904fc5.ctex"]
 
 [params]
 
