@@ -11,7 +11,7 @@ var prevState:State
 
 func enter() -> void:
 	super()
-	get_hit(1)
+	get_hit(parent.damage)
 	print(enemyHP)
 
 func exit()->void:

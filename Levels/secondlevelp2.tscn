@@ -576,6 +576,8 @@ shape = SubResource("RectangleShape2D_2cw7c")
 [node name="Cure" parent="." instance=ExtResource("4_nrpbv")]
 position = Vector2(1005, 627)
 scale = Vector2(0.2, 0.2)
+collision_layer = 32
+collision_mask = 2
 
 [node name="Platform" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("5_4v71w")]
 position = Vector2(73, 148)
@@ -594,4 +596,4 @@ scenePath = "res://Levels/LastLevel.tscn"
 promptMessage = "Dungeon"
 
 [node name="Player" parent="." instance=ExtResource("7_s18il")]
-position = Vector2(1136, 103)
+position = Vector2(935, 611)

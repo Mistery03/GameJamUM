@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b25pkdrpc4psq"]
+[gd_scene load_steps=5 format=3 uid="uid://b25pkdrpc4psq"]
 
+[ext_resource type="Script" path="res://Object/cure.gd" id="1_g5rdt"]
 [ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_uilkj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8uvma"]
@@ -12,6 +13,7 @@ region = Rect2(3592, 0, 208, 200)
 [node name="Cure" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 0
+script = ExtResource("1_g5rdt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8uvma")
@@ -20,6 +22,10 @@ shape = SubResource("CircleShape2D_8uvma")
 texture = SubResource("AtlasTexture_ukmqo")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_8uvma")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

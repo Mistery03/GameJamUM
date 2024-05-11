@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chs63ny6ncu80"]
+[gd_scene load_steps=12 format=3 uid="uid://chs63ny6ncu80"]
 
 [ext_resource type="Texture2D" uid="uid://bppfvr5cfv1go" path="res://Asset/Spritesheet/Background_0.png" id="1_5y28i"]
 [ext_resource type="Texture2D" uid="uid://civxmsllq3vib" path="res://UI/Tiles.png" id="1_alo2j"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dwg10yia57r3w" path="res://Asset/Spritesheet/Grass_background_2.png" id="4_plllk"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="6_vja1v"]
 [ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="7_t6hxr"]
+[ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="9_rawwf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvljo"]
 texture = ExtResource("1_alo2j")
@@ -424,3 +425,8 @@ position = Vector2(158, 158)
 [node name="Enemy" parent="." instance=ExtResource("7_t6hxr")]
 position = Vector2(52, 458)
 disable_mode = 1
+
+[node name="Door" parent="." instance=ExtResource("9_rawwf")]
+position = Vector2(967, 471)
+scenePath = "res://Levels/Level1.tscn"
+promptMessage = "Enter?"
