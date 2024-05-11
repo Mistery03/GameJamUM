@@ -853,7 +853,7 @@ script = ExtResource("1_r1qu8")
 dialogueName = "Dialogue4"
 
 [node name="Player" parent="." instance=ExtResource("3_lmvt6")]
-position = Vector2(888, 654)
+position = Vector2(1680, 95)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8vuom")
@@ -887,8 +887,8 @@ position = Vector2(600, 429)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1046, 433)
 scale = Vector2(2, 2)
-collision_layer = 7
-collision_mask = 4
+collision_layer = 16
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2.75, -4)

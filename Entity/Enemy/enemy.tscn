@@ -209,7 +209,7 @@ animations = [{
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_layer = 8
-collision_mask = 3
+collision_mask = 19
 script = ExtResource("1_qghkt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -222,7 +222,7 @@ collision_mask = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(50, 0)
-collision_mask = 3
+collision_mask = 19
 script = ExtResource("2_64t8h")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
