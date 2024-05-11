@@ -4,11 +4,13 @@ extends State
 var idle_state: State
 @export
 var move_state: State
+@export
+var jump_state:State
 
 
 
 func process_physics(delta: float) -> State:
-	parent.velocity.y += parent.gravity  * delta
+	parent.velocity.y += jump_state.getGravity()  * delta
 
 	var movement = move_component.get_movement_direction() * move_speed * delta
 	
