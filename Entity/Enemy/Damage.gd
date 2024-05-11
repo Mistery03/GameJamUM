@@ -20,7 +20,6 @@ func exit()->void:
 func process_frame(delta: float) -> State:
 	if enemyHP<=0:
 		return died
-	
 	return prevState
 
 

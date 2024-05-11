@@ -226,10 +226,11 @@ jumpTimeToDescent = 0.4
 animation_name = "jump"
 move_speed = 10000.0
 
-[node name="Attack" type="Node" parent="StateManager" node_paths=PackedStringArray("idle_state", "move_state")]
+[node name="Attack" type="Node" parent="StateManager" node_paths=PackedStringArray("idle_state", "move_state", "damage_state")]
 script = ExtResource("9_twaom")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
+damage_state = NodePath("../Hurt")
 animation_name = "ATTACK"
 
 [node name="Dead" type="Node" parent="StateManager"]

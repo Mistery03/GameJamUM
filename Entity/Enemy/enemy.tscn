@@ -254,9 +254,10 @@ damage_state = NodePath("../Damage")
 animation_name = "moving"
 move_speed = 8000.0
 
-[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("move_state")]
+[node name="Attack" type="Node" parent="StateMachine" node_paths=PackedStringArray("move_state", "damage_state")]
 script = ExtResource("6_h8byf")
 move_state = NodePath("../Moving")
+damage_state = NodePath("../Damage")
 animation_name = "enemy_attack"
 
 [node name="Damage" type="Node" parent="StateMachine" node_paths=PackedStringArray("died")]

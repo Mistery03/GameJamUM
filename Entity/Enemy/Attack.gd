@@ -3,7 +3,7 @@ extends State
 
 @export
 var move_state: State
-@export var damage: State
+@export var damage_state: State
 
 var lerp_timer: Timer
 
@@ -31,6 +31,10 @@ func process_physics(delta: float) -> State:
 			parent.attackPlayer.get_collider().isHit = true
 	else:
 		return move_state
+	
+	if parent.isHit:
+		damage_state.prevState = self
+		return damage_state
 		
 	
 
