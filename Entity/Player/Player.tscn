@@ -155,13 +155,13 @@ script = ExtResource("7_jjxa5")
 
 [node name="Jump" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "idle_state", "move_state")]
 script = ExtResource("8_neg4y")
-jumpHeight = 90.0
-jumpTimeToPeak = 0.5
-jumpTimeToDescent = 0.4
-move_speed = 10000.0
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
+jumpHeight = 110.0
+jumpTimeToPeak = 0.5
+jumpTimeToDescent = 0.4
+move_speed = 10000.0
 
 [node name="moveComponent" type="Node" parent="."]
 script = ExtResource("4_ceuyd")

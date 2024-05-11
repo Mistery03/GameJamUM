@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ipeisqr2vo3"
-path="res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-fdcf2e3515609840417135d6027fbece.ctex"
+uid="uid://d1p5n4cvk1l1h"
+path="res://.godot/imported/column.png-505029732d6643018010027c2f80d359.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/The Sidescroller's Dungeon Tiles 32x32.png"
-dest_files=["res://.godot/imported/The Sidescroller's Dungeon Tiles 32x32.png-fdcf2e3515609840417135d6027fbece.ctex"]
+source_file="res://Asset/Spritesheet/column.png"
+dest_files=["res://.godot/imported/column.png-505029732d6643018010027c2f80d359.ctex"]
 
 [params]
 

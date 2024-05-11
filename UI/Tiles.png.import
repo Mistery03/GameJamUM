@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bys27uxg6qnax"
-path="res://.godot/imported/Torch Sprite Sheet 32x64.png-d87d837be98540913de227e7fc4a7b76.ctex"
+uid="uid://civxmsllq3vib"
+path="res://.godot/imported/Tiles.png-d1c9dd2cd7dca975a59576a1051ef379.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Torch Sprite Sheet 32x64.png"
-dest_files=["res://.godot/imported/Torch Sprite Sheet 32x64.png-d87d837be98540913de227e7fc4a7b76.ctex"]
+source_file="res://UI/Tiles.png"
+dest_files=["res://.godot/imported/Tiles.png-d1c9dd2cd7dca975a59576a1051ef379.ctex"]
 
 [params]
 

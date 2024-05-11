@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://chs63ny6ncu80"]
 
 [ext_resource type="Texture2D" uid="uid://bppfvr5cfv1go" path="res://Asset/Spritesheet/Background_0.png" id="1_5y28i"]
-[ext_resource type="Texture2D" uid="uid://civxmsllq3vib" path="res://Asset/Spritesheet/Tiles.png" id="1_alo2j"]
+[ext_resource type="Texture2D" uid="uid://civxmsllq3vib" path="res://UI/Tiles.png" id="1_alo2j"]
 [ext_resource type="Script" path="res://Levels/IntroLevel.gd" id="1_s1wlb"]
 [ext_resource type="Texture2D" uid="uid://dxp2h665ymx5x" path="res://Asset/Spritesheet/Background_1.png" id="2_ii182"]
 [ext_resource type="Texture2D" uid="uid://bfbhw5ytol7hq" path="res://Asset/Spritesheet/Grass_background_1.png" id="3_vt5ry"]
