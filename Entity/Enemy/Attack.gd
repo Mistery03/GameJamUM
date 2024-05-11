@@ -1,14 +1,9 @@
 class_name AttackEnemy
 extends State
 
-
 @export
 var move_state: State
-@export
-var jump_state: State
-@export
-var fall_state: State
-
+@export var damage: State
 
 var lerp_timer: Timer
 
@@ -28,14 +23,15 @@ func lerp_to_zero():
 	if abs(parent.velocity.x) < 0.01:
 		parent.velocity.x = 0.0
 
-
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.gravity * delta
-	parent.move_and_slide()
 	
-	#if !parent.is_on_floor():
-		#return fall_state
+	if parent.attackPlayer.is_colliding():
+		print("attacking")
+	else:
+		return move_state
+		
 	
-	
+
 	return null
 
