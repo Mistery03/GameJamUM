@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://coebdi7dc7rd2"]
+
+[ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_hk5qn"]
+
+[resource]
+atlas = ExtResource("1_hk5qn")
+region = Rect2(3008, 0, 192, 200)

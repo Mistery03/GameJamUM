@@ -33,11 +33,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"ChadPriest": "res://Dialogic/Characters/ChadPriest.dch",
 "Doctor": "res://Dialogic/Characters/Doctor.dch",
-"Lovis": "res://Dialogic/Characters/Lovis.dch"
+"Lovis": "res://Dialogic/Characters/Lovis.dch",
+"TheLucia": "res://Dialogic/Characters/TheLucia.dch"
 }
 directories/dtl_directory={
+"Dialogue1": "res://Dialogic/Timelines/Dialogue1.dtl",
+"Dialogue2": "res://Dialogic/Timelines/Dialogue2.dtl",
 "Dialogue3": "res://Dialogic/Timelines/Dialogue3.dtl",
+"Dialogue4": "res://Dialogic/Timelines/Dialogue4.dtl",
 "Doctor": "res://Dialogic/Timelines/Doctor.dtl",
 "Enna": "res://Dialogic/Timelines/Enna.dtl",
 "IntroductionDialogue": "res://Dialogic/Timelines/IntroductionDialogue.dtl"
