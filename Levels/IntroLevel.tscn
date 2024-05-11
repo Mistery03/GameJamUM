@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://chs63ny6ncu80"]
+[gd_scene load_steps=11 format=3 uid="uid://chs63ny6ncu80"]
 
 [ext_resource type="Texture2D" uid="uid://bppfvr5cfv1go" path="res://Asset/Spritesheet/Background_0.png" id="1_5y28i"]
 [ext_resource type="Texture2D" uid="uid://civxmsllq3vib" path="res://Asset/Spritesheet/Tiles.png" id="1_alo2j"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfbhw5ytol7hq" path="res://Asset/Spritesheet/Grass_background_1.png" id="3_vt5ry"]
 [ext_resource type="Texture2D" uid="uid://dwg10yia57r3w" path="res://Asset/Spritesheet/Grass_background_2.png" id="4_plllk"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="6_vja1v"]
+[ext_resource type="PackedScene" uid="uid://bavn0h6e7wwgh" path="res://Entity/NPC/NPC.tscn" id="8_wlrl3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvljo"]
 texture = ExtResource("1_alo2j")
@@ -402,3 +403,6 @@ texture = ExtResource("4_plllk")
 
 [node name="Player" parent="." instance=ExtResource("6_vja1v")]
 position = Vector2(158, 158)
+
+[node name="Npc" parent="." instance=ExtResource("8_wlrl3")]
+position = Vector2(824, 492)

@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bavn0h6e7wwgh"]
+
+[ext_resource type="Script" path="res://Entity/NPC/NPC.gd" id="1_v17ku"]
+[ext_resource type="Texture2D" uid="uid://cpme7sx6f64le" path="res://Asset/TempAsset/doctor.png" id="2_wun4j"]
+[ext_resource type="Script" path="res://HUD/prompt_action.gd" id="3_0lxw2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22prc"]
+atlas = ExtResource("2_wun4j")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0he4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22prc")
+}],
+"loop": true,
+"name": &"Doctor",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xaqe"]
+radius = 31.0
+height = 190.0
+
+[node name="Npc" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_v17ku")
+timelineName = "Doctor"
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_0he4x")
+animation = &"Doctor"
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_4xaqe")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(-1, 0)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_4xaqe")
+
+[node name="promptAction" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 780.0
+offset_bottom = 104.0
+scale = Vector2(0.05, 0.05)
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+script = ExtResource("3_0lxw2")
+promptAction = "Interact"
+promptMessage = ": Interact"
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]
