@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6ql0i3g4nl7t"]
+[gd_scene load_steps=6 format=3 uid="uid://bh54nv8117onj"]
 
+[ext_resource type="Script" path="res://Entity/NPC/Priest.gd" id="1_djy82"]
 [ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_u3w7b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7cr6"]
@@ -10,8 +11,13 @@ region = Rect2(2806.83, 0, 185.009, 200)
 radius = 27.0
 height = 120.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qh0iy"]
+radius = 140.0
+height = 720.0
+
 [node name="Priest" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_djy82")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_n7cr6")
@@ -20,3 +26,14 @@ texture = SubResource("AtlasTexture_n7cr6")
 visible = false
 position = Vector2(-6, -3)
 shape = SubResource("CapsuleShape2D_qryek")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="Hitbox" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(11, 5)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_qh0iy")
+
+[connection signal="input_event" from="InteractArea" to="." method="_on_interact_area_input_event"]
