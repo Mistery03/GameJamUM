@@ -32,7 +32,7 @@ func process_input(event: InputEvent) -> State:
 		return jump_state
 	if move_component.axis:
 		return move_state
-
+		
 
 	return null
 
@@ -40,8 +40,8 @@ func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.gravity * delta
 	parent.move_and_slide()
 	
-	if !parent.is_on_floor():
-		return fall_state
+	#if !parent.is_on_floor():
+		#return fall_state
 	
 	
 	return null
