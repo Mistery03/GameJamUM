@@ -1,4 +1,3 @@
-class_name Moveable
 extends Node
 
 
