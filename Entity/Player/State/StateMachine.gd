@@ -15,6 +15,13 @@ func init(parent: Player, animations: AnimatedSprite2D,moveComponent:IMoveCompon
 	
 	change_state(starting_state)
 # Change to the new state by first calling any exit logic on the current state.
+
+func initEntity(parent: Entity, animations: AnimatedSprite2D)->void:
+	for child in get_children():
+		child.parent = parent
+		child.animations = animations
+	change_state(starting_state)
+			
 func change_state(new_state: State) -> void:
 	if current_state:
 		current_state.exit()

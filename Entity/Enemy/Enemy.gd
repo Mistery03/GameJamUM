@@ -1,15 +1,17 @@
-extends Node
+class_name Enemy
+extends Entity
 
 @onready var animation = $Animation
-
 @export var enemyAttack: int = 10
-const enemySpeed: int = 10
-var enemyDirection = Vector2.RIGHT
+@onready var state_machine = $StateMachine
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
+	state_machine.initEntity(self,animation)
+	
+func _physics_process(delta: float) -> void:
+	state_machine.process_physics(delta)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _process(delta: float) -> void:
+	state_machine.process_frame(delta)
+	
