@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dopdxsfcsq1ow" path="res://Asset/Spritesheet/Torch Sprite Sheet 32x64.png" id="2_nh5mp"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_lmvt6"]
 [ext_resource type="Texture2D" uid="uid://bllii52wkbi6h" path="res://Asset/Spritesheet/Salt.png" id="4_vgixi"]
-[ext_resource type="PackedScene" uid="uid://c6ql0i3g4nl7t" path="res://Entity/NPC/Priest.tscn" id="5_a2nsn"]
+[ext_resource type="PackedScene" path="res://Entity/NPC/Priest.tscn" id="5_a2nsn"]
 [ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="6_c1obc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]

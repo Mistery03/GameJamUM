@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://db7jm850j4x85"]
+[gd_scene load_steps=15 format=3 uid="uid://db7jm850j4x85"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_24kim"]
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_ryo6y"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_1td8y"]
 [ext_resource type="PackedScene" uid="uid://pj7mox8vr0df" path="res://Platform/platform.tscn" id="5_4gofp"]
 [ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="6_3f1dm"]
+[ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="6_om7uv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_ryo6y")
@@ -902,3 +903,9 @@ light_mask = 3
 visibility_layer = 3
 position = Vector2(79.5, 0)
 shape = SubResource("RectangleShape2D_do80a")
+
+[node name="Door" parent="." instance=ExtResource("6_om7uv")]
+position = Vector2(976, 702)
+whom = "???"
+scenePath = "res://Levels/secondlevel.tscn"
+promptMessage = "Dungeon"
