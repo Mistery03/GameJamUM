@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmh20erovcqag"]
+
+[ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_6ra37"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkxf7"]
+atlas = ExtResource("1_6ra37")
+region = Rect2(3187.77, -1.82111, 212.96, 198.319)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt3sd"]
+size = Vector2(137, 25)
+
+[node name="Spike" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_hkxf7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_bt3sd")

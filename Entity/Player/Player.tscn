@@ -102,7 +102,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_30wm4"]
-height = 36.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
@@ -159,7 +159,7 @@ script = ExtResource("8_neg4y")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
-jumpHeight = 90.0
+jumpHeight = 110.0
 jumpTimeToPeak = 0.5
 jumpTimeToDescent = 0.4
 move_speed = 10000.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwiyklqts8l83"]
+
+[ext_resource type="Texture2D" uid="uid://c3qcc72117sob" path="res://Asset/Spritesheet/doc'sroom.png" id="1_t4occ"]
+[ext_resource type="PackedScene" uid="uid://cfnblrbyg7fgu" path="res://Entity/NPC/Doctor.tscn" id="2_t7guy"]
+
+[node name="Doctor\'sRoom" type="Node2D"]
+
+[node name="Doc\'sroom" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(0.9, 0.902778)
+texture = ExtResource("1_t4occ")
+
+[node name="Doctor" parent="." instance=ExtResource("2_t7guy")]
+position = Vector2(469, 421)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ql0i3g4nl7t"]
+
+[ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_u3w7b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7cr6"]
+atlas = ExtResource("1_u3w7b")
+region = Rect2(2806.83, 0, 185.009, 200)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qryek"]
+radius = 27.0
+height = 120.0
+
+[node name="Priest" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_n7cr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-6, -3)
+shape = SubResource("CapsuleShape2D_qryek")
