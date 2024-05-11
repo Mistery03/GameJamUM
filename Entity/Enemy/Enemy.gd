@@ -4,6 +4,10 @@ extends Entity
 @onready var animation = $Animation
 @export var enemyAttack: int = 10
 @onready var state_machine = $StateMachine
+@onready var detectPlayer = $RayCast2D
+@onready var attackPlayer = $Attack
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,4 +18,7 @@ func _physics_process(delta: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	state_machine.process_frame(delta)
+	
+
+	
 	
