@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://db7jm850j4x85"]
+[gd_scene load_steps=9 format=3 uid="uid://db7jm850j4x85"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_24kim"]
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_ryo6y"]
 [ext_resource type="Texture2D" uid="uid://dopdxsfcsq1ow" path="res://Asset/Spritesheet/Torch Sprite Sheet 32x64.png" id="2_hep4t"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_1td8y"]
+[ext_resource type="PackedScene" uid="uid://bot53l1qlvpv8" path="res://Entity/NPC/Sister.tscn" id="5_qdlgo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_ryo6y")
@@ -855,3 +856,6 @@ layer_2/tile_data = PackedInt32Array(524309, 917506, 13, 589845, 917506, 14, 524
 
 [node name="Player" parent="." instance=ExtResource("3_1td8y")]
 position = Vector2(28, 57)
+
+[node name="Sister" parent="." instance=ExtResource("5_qdlgo")]
+position = Vector2(1614, 253)

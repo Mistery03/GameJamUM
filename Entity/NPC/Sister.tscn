@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bot53l1qlvpv8"]
+
+[ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="1_yl2p5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcpl2"]
+atlas = ExtResource("1_yl2p5")
+region = Rect2(3013.2, 0.200012, 179.3, 196.9)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po3q6"]
+radius = 26.0
+height = 144.0
+
+[node name="Sister" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_wcpl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-5, 2)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_po3q6")
