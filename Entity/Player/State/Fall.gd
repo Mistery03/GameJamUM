@@ -7,7 +7,9 @@ var move_state: State
 @export
 var jump_state:State
 
-
+func enter() -> void:
+	super()
+	camera.position_smoothing_enabled = false
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += jump_state.getGravity()  * delta

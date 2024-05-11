@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cn2gpadmmp748"]
+[gd_scene load_steps=24 format=3 uid="uid://cn2gpadmmp748"]
 
 [ext_resource type="Script" path="res://Entity/Player/Player.gd" id="1_h466v"]
 [ext_resource type="Texture2D" uid="uid://dqgumcbbx17i6" path="res://Asset/Spritesheet/playerSpriteSheet.png" id="2_ynjvo"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Entity/Player/State/Fall.gd" id="6_7bh3u"]
 [ext_resource type="Script" path="res://Entity/Player/State/Dash.gd" id="7_jjxa5"]
 [ext_resource type="Script" path="res://Entity/Player/State/Jump.gd" id="8_neg4y"]
+[ext_resource type="Script" path="res://Entity/Player/cameraMovementCompoentn.gd" id="10_wwk2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_plx8x"]
 atlas = ExtResource("2_ynjvo")
@@ -106,6 +107,7 @@ height = 36.0
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_h466v")
+camera_speed = 8000.0
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -129,6 +131,7 @@ script = ExtResource("4_eiggd")
 move_state = NodePath("../Move")
 jump_state = NodePath("../Jump")
 fall_state = NodePath("../Fall")
+move_speed = 8000.0
 
 [node name="Move" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state")]
 script = ExtResource("5_mm2jq")
@@ -161,5 +164,8 @@ move_speed = 10000.0
 
 [node name="moveComponent" type="Node" parent="."]
 script = ExtResource("4_ceuyd")
+
+[node name="cameraMovementComponent" type="Node" parent="."]
+script = ExtResource("10_wwk2v")
 
 [node name="ROOTUI" type="CanvasLayer" parent="."]
