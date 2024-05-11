@@ -9,6 +9,8 @@ extends Entity
 @onready var move_component = $moveComponent
 @onready var camera_movement_component = $cameraMovementComponent
 
+var mousePos:Vector2
+
 
 func _ready() -> void:
 	state_manager.init(self,animation,move_component,camera)
@@ -24,4 +26,5 @@ func _physics_process(delta: float) -> void:
 	
 
 func _process(delta: float) -> void:
+	mousePos = get_global_mouse_position()
 	state_manager.process_frame(delta)
