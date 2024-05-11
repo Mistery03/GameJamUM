@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://db7jm850j4x85"]
+[gd_scene load_steps=17 format=3 uid="uid://db7jm850j4x85"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_24kim"]
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_ryo6y"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="6_3f1dm"]
 [ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="6_om7uv"]
 [ext_resource type="PackedScene" uid="uid://dlys1ly3w3vhu" path="res://Trap/Spike.tscn" id="8_atbnp"]
+[ext_resource type="PackedScene" uid="uid://cw4elagvhkhom" path="res://Entity/NPC/Sister.tscn" id="9_k1mg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_ryo6y")
@@ -864,6 +865,7 @@ size = Vector2(5.75, 27)
 
 [node name="firstlevel" type="Node2D"]
 script = ExtResource("1_24kim")
+dialogueName = "Dialogue2"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_scvla")
@@ -914,3 +916,6 @@ promptMessage = "Dungeon"
 [node name="Spike" parent="." instance=ExtResource("8_atbnp")]
 position = Vector2(1214, 724)
 scale = Vector2(2.3, 1)
+
+[node name="Sister" parent="." instance=ExtResource("9_k1mg2")]
+position = Vector2(1652, 246)

@@ -2,13 +2,16 @@ extends Node2D
 
 @onready var tile_map = $TileMap
 @onready var player = $Player
+@onready var sister = $Sister
 
+@export var dialogueName:String 
 var map_limits = tile_map
 var map_cellsize = Vector2(32,32)
 var playerPrevPos:Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	map_limits = tile_map.get_used_rect()
+	sister.dialogueName = dialogueName
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

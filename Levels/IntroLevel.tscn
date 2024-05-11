@@ -420,10 +420,10 @@ position = Vector2(1933, 442)
 texture = ExtResource("4_plllk")
 
 [node name="Player" parent="." instance=ExtResource("6_vja1v")]
-position = Vector2(158, 158)
+position = Vector2(140, 454)
 
 [node name="Enemy" parent="." instance=ExtResource("7_t6hxr")]
-position = Vector2(52, 458)
+position = Vector2(1149, 485)
 disable_mode = 1
 
 [node name="Door" parent="." instance=ExtResource("9_rawwf")]
