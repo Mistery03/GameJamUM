@@ -7,6 +7,10 @@ var idle_state: State
 @export
 var jump_state: State
 
+func enter() -> void:
+	super()
+	parent.camera.position_smoothing_enabled = false
+
 func process_input(event: InputEvent) -> State:
 	if move_component.wants_jump() and parent.is_on_floor():
 		return jump_state

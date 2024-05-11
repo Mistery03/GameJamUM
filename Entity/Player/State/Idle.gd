@@ -13,6 +13,7 @@ var lerp_timer: Timer
 
 func enter() -> void:
 	super()
+	camera.position_smoothing_enabled = true
 	lerp_to_zero()
 	await parent.get_tree().create_timer(0.2).timeout
 	parent.velocity.x = 0.0
@@ -30,7 +31,7 @@ func process_input(event: InputEvent) -> State:
 	move_component.axis = move_component.get_movement_direction()
 	if Input.is_action_just_pressed("JUMP") and parent.is_on_floor():
 		return jump_state
-	if move_component.axis:
+	if move_component.axis and camera.position == Vector2.ZERO:
 		return move_state
 		
 
@@ -40,8 +41,12 @@ func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.gravity * delta
 	parent.move_and_slide()
 	
-	#if !parent.is_on_floor():
-		#return fall_state
+	
+
+	camera.position = parent.camera_movement_component.get_movement_direction() * move_speed * delta
+
+	if !parent.is_on_floor():
+		return fall_state
 	
 	
 	return null

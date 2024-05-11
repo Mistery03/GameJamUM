@@ -1,11 +1,13 @@
 class_name Player
 extends Entity
 
-	
+@export var camera_speed:float
+
 @onready var animation = $Animation
 @onready var state_manager = $StateManager
 @onready var camera = $Camera
 @onready var move_component = $moveComponent
+@onready var camera_movement_component = $cameraMovementComponent
 
 
 func _ready() -> void:
@@ -17,6 +19,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	state_manager.process_physics(delta)
+	
+	
+	
 
 func _process(delta: float) -> void:
 	state_manager.process_frame(delta)
