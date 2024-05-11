@@ -1,4 +1,4 @@
-class_name Platform
+class_name Moveable
 extends Node
 
 
