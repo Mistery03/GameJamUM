@@ -57,6 +57,10 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="GamejamUM"
