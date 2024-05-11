@@ -1,7 +1,7 @@
 class_name Player
 extends Entity
 
-
+	
 @onready var animation = $Animation
 @onready var state_manager = $StateManager
 @onready var camera = $Camera

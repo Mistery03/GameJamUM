@@ -1,7 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://b2103emlu7ks3"]
+[gd_scene load_steps=31 format=3 uid="uid://b2103emlu7ks3"]
 
 [ext_resource type="Texture2D" uid="uid://d01fumd24as1k" path="res://Entity/Enemy/enemy.png" id="1_gfih7"]
+[ext_resource type="Script" path="res://Entity/Enemy/Enemy.gd" id="1_qghkt"]
 [ext_resource type="Script" path="res://Entity/Enemy/Damage.gd" id="2_ctm48"]
+[ext_resource type="Script" path="res://Entity/Player/State/State.gd" id="4_e57o1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00y6r"]
 size = Vector2(7, 19)
@@ -193,7 +195,11 @@ animations = [{
 }]
 
 [node name="Enemy" type="CharacterBody2D"]
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
+script = ExtResource("1_qghkt")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(100, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -1.5)
@@ -203,7 +209,11 @@ shape = SubResource("RectangleShape2D_00y6r")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_aoiwl")
 animation = &"attacking"
-frame_progress = 0.314954
+frame_progress = 0.956878
 
 [node name="Damage" type="Node" parent="."]
 script = ExtResource("2_ctm48")
+
+[node name="State" type="Node" parent="."]
+script = ExtResource("4_e57o1")
+animation_name = "MOVING"
