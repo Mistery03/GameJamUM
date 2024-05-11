@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpwfnevlhknm"]
+[gd_scene load_steps=12 format=3 uid="uid://cpwfnevlhknm"]
 
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_o6hhu"]
 [ext_resource type="Texture2D" uid="uid://dopdxsfcsq1ow" path="res://Asset/Spritesheet/Torch Sprite Sheet 32x64.png" id="2_nh5mp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bllii52wkbi6h" path="res://Asset/Spritesheet/Salt.png" id="4_vgixi"]
 [ext_resource type="PackedScene" path="res://Entity/NPC/Priest.tscn" id="5_a2nsn"]
 [ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="6_c1obc"]
+[ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="7_ftjfc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_o6hhu")
@@ -903,3 +904,6 @@ shape = SubResource("RectangleShape2D_p1fic")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-102.5, -175)
 shape = SubResource("RectangleShape2D_p1fic")
+
+[node name="Door" parent="." instance=ExtResource("7_ftjfc")]
+position = Vector2(14, 220)

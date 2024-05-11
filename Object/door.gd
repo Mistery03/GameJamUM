@@ -1,14 +1,18 @@
 extends Node2D
 
 @export var whom:String
+@export var texture:Texture2D
 @export_file("*.tscn") var scenePath
 @onready var prompt_action = $promptAction
 @export var promptMessage:String
+@onready var sprite = $Sprite
+
 var isPlayerWithin:bool
 var body:Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	prompt_action.text = whom + promptMessage + "\n[E]"
+	sprite.texture = texture
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
