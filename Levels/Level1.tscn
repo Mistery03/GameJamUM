@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dopdxsfcsq1ow" path="res://Asset/Spritesheet/Torch Sprite Sheet 32x64.png" id="2_hep4t"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_1td8y"]
 [ext_resource type="PackedScene" uid="uid://pj7mox8vr0df" path="res://Platform/platform.tscn" id="5_4gofp"]
-[ext_resource type="PackedScene" uid="uid://b3nh3fne4758j" path="res://Object/door.tscn" id="6_om7uv"]
+[ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="6_om7uv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_ryo6y")

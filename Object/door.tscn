@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3nh3fne4758j"]
+[gd_scene load_steps=6 format=3 uid="uid://6esvaxm240mf"]
 
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_51vv5"]
 [ext_resource type="Script" path="res://Object/door.gd" id="1_jdvgn"]

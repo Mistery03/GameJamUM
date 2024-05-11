@@ -8,6 +8,8 @@ var jump_state: State
 var fall_state: State
 @export
 var attack_state: State
+@export
+var damage_state: State
 
 
 var lerp_timer: Timer
@@ -58,6 +60,10 @@ func process_physics(delta: float) -> State:
 
 	if !parent.is_on_floor():
 		return fall_state
+	
+	if parent.isHit:
+		damage_state.prevState = self
+		return damage_state
 	
 	
 	return null

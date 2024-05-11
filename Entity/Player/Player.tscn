@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cn2gpadmmp748"]
+[gd_scene load_steps=30 format=3 uid="uid://cn2gpadmmp748"]
 
 [ext_resource type="Script" path="res://Entity/Player/Player.gd" id="1_h466v"]
 [ext_resource type="Texture2D" uid="uid://chhaiatp6d7xj" path="res://Asset/Spritesheet/spritesheet_GDCJammer.png" id="2_1q7hp"]
@@ -10,7 +10,9 @@
 [ext_resource type="Script" path="res://Entity/Player/State/Dash.gd" id="7_jjxa5"]
 [ext_resource type="Script" path="res://Entity/Player/State/Jump.gd" id="8_neg4y"]
 [ext_resource type="Script" path="res://Entity/Player/State/Attack.gd" id="9_twaom"]
+[ext_resource type="Script" path="res://Entity/Player/State/Dead.gd" id="10_f6jng"]
 [ext_resource type="Script" path="res://Entity/Player/cameraMovementCompoentn.gd" id="10_wwk2v"]
+[ext_resource type="Script" path="res://Entity/Player/State/Hurt.gd" id="11_efa7s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hrcq2"]
 atlas = ExtResource("2_1q7hp")
@@ -163,6 +165,7 @@ collision_layer = 2
 collision_mask = 17
 script = ExtResource("1_h466v")
 camera_speed = 8000.0
+maxHealth = 100.0
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -182,20 +185,22 @@ zoom = Vector2(2, 2)
 script = ExtResource("3_lnf71")
 starting_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateManager" node_paths=PackedStringArray("move_state", "jump_state", "fall_state", "attack_state")]
+[node name="Idle" type="Node" parent="StateManager" node_paths=PackedStringArray("move_state", "jump_state", "fall_state", "attack_state", "damage_state")]
 script = ExtResource("4_eiggd")
 move_state = NodePath("../Move")
 jump_state = NodePath("../Jump")
 fall_state = NodePath("../Fall")
 attack_state = NodePath("../Attack")
+damage_state = NodePath("../Hurt")
 move_speed = 8000.0
 
-[node name="Move" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "attack_state")]
+[node name="Move" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "idle_state", "jump_state", "attack_state", "damage_state")]
 script = ExtResource("5_mm2jq")
 fall_state = NodePath("../Fall")
 idle_state = NodePath("../Idle")
 jump_state = NodePath("../Jump")
 attack_state = NodePath("../Attack")
+damage_state = NodePath("../Hurt")
 animation_name = "RUNNING"
 move_speed = 10000.0
 
@@ -227,6 +232,16 @@ idle_state = NodePath("../Idle")
 move_state = NodePath("../Move")
 animation_name = "ATTACK"
 
+[node name="Dead" type="Node" parent="StateManager"]
+script = ExtResource("10_f6jng")
+animation_name = "dead"
+
+[node name="Hurt" type="Node" parent="StateManager" node_paths=PackedStringArray("died_state")]
+script = ExtResource("11_efa7s")
+died_state = NodePath("../Dead")
+damage = 1.0
+animation_name = "hurt"
+
 [node name="moveComponent" type="Node" parent="."]
 script = ExtResource("4_ceuyd")
 
@@ -238,3 +253,4 @@ script = ExtResource("10_wwk2v")
 [node name="Attack" type="RayCast2D" parent="."]
 rotation = -1.5708
 scale = Vector2(0.5, 0.5)
+collision_mask = 8
