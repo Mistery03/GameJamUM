@@ -234,9 +234,10 @@ stream = ExtResource("5_2mbho")
 script = ExtResource("4_3va7a")
 starting_state = NodePath("Moving")
 
-[node name="Moving" type="Node" parent="StateMachine" node_paths=PackedStringArray("chase_state")]
+[node name="Moving" type="Node" parent="StateMachine" node_paths=PackedStringArray("chase_state", "damage_state")]
 script = ExtResource("5_43lnn")
 chase_state = NodePath("../Chase")
+damage_state = NodePath("../Damage")
 speed = 1000
 animation_name = "moving"
 move_speed = 1000.0

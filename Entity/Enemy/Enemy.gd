@@ -7,6 +7,7 @@ extends Entity
 @onready var detectPlayer = $RayCast2D
 @onready var attackPlayer = $Attack
 
+var isHit:bool
 
 
 # Called when the node enters the scene tree for the first time.

@@ -6,6 +6,8 @@ var move_state: State
 var jump_state: State
 @export
 var fall_state: State
+@export
+var attack_state: State
 
 
 var lerp_timer: Timer
@@ -32,7 +34,16 @@ func process_input(event: InputEvent) -> State:
 	if Input.is_action_just_pressed("JUMP") and parent.is_on_floor():
 		return jump_state
 	if move_component.axis and camera.position == Vector2.ZERO:
+		if move_component.axis.x < 0:
+			parent.attackLOS.rotation = 1.5708
+		elif move_component.axis.x > 0:
+			parent.attackLOS.rotation = -1.5708
 		return move_state
+		
+	if Input.is_action_pressed("ACTION"):
+		attack_state.prevState = self
+		return attack_state
+	
 		
 
 	return null
