@@ -907,3 +907,6 @@ shape = SubResource("RectangleShape2D_p1fic")
 
 [node name="Door" parent="." instance=ExtResource("7_ftjfc")]
 position = Vector2(14, 220)
+whom = "Doctor"
+scenePath = "res://Scenes/Doctor's room.tscn"
+promptMessage = "'s room(?)"

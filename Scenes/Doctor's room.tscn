@@ -10,7 +10,7 @@ size = Vector2(1161.5, 128)
 
 [node name="Doctor\'sRoom" type="Node2D"]
 script = ExtResource("1_p4gd4")
-dialogueName = "Doctor"
+dialogueName = "Dialogue3"
 
 [node name="Doc\'sroom" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
