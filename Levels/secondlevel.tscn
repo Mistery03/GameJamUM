@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpwfnevlhknm"]
+[gd_scene load_steps=11 format=3 uid="uid://cpwfnevlhknm"]
 
 [ext_resource type="Texture2D" uid="uid://cwvgyage1d5gb" path="res://Asset/Spritesheet/The Sidescroller's Dungeon Tiles 32x32.png" id="1_o6hhu"]
 [ext_resource type="Texture2D" uid="uid://dopdxsfcsq1ow" path="res://Asset/Spritesheet/Torch Sprite Sheet 32x64.png" id="2_nh5mp"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_lmvt6"]
 [ext_resource type="Texture2D" uid="uid://bllii52wkbi6h" path="res://Asset/Spritesheet/Salt.png" id="4_vgixi"]
 [ext_resource type="PackedScene" uid="uid://c6ql0i3g4nl7t" path="res://Entity/NPC/Priest.tscn" id="5_a2nsn"]
+[ext_resource type="PackedScene" uid="uid://b2103emlu7ks3" path="res://Entity/Enemy/enemy.tscn" id="6_c1obc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_67pc1"]
 texture = ExtResource("1_o6hhu")
@@ -842,10 +843,13 @@ custom_data_layer_1/type = 0
 sources/3 = SubResource("TileSetAtlasSource_qiud7")
 sources/2 = SubResource("TileSetAtlasSource_67pc1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1fic"]
+size = Vector2(11.5, 28)
+
 [node name="secondlevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_lmvt6")]
-position = Vector2(1676, 79)
+position = Vector2(1318, 101)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8vuom")
@@ -861,7 +865,41 @@ layer_3/tile_data = PackedInt32Array(917503, 655362, 13, 983039, 655362, 14, 851
 
 [node name="Priest" parent="." instance=ExtResource("5_a2nsn")]
 position = Vector2(738, 733)
+collision_layer = 0
 
 [node name="Salt" type="Sprite2D" parent="."]
 position = Vector2(640, 668)
 texture = ExtResource("4_vgixi")
+
+[node name="Enemy" parent="." instance=ExtResource("6_c1obc")]
+position = Vector2(1297, 755)
+
+[node name="Enemy2" parent="." instance=ExtResource("6_c1obc")]
+position = Vector2(901, 88)
+
+[node name="Enemy3" parent="." instance=ExtResource("6_c1obc")]
+position = Vector2(600, 429)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1046, 433)
+scale = Vector2(2, 2)
+collision_layer = 7
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.75, -4)
+shape = SubResource("RectangleShape2D_p1fic")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1046, 433)
+scale = Vector2(2, 2)
+collision_layer = 6
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(107, -175)
+shape = SubResource("RectangleShape2D_p1fic")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-102.5, -175)
+shape = SubResource("RectangleShape2D_p1fic")
