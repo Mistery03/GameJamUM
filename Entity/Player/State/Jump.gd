@@ -28,6 +28,7 @@ func getGravity()->float:
 func enter() -> void:
 	super()
 	parent.velocity.y = jumpVelocity
+	camera.position_smoothing_enabled = false
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.gravity * delta
