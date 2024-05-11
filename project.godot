@@ -39,7 +39,14 @@ JUMP={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Enviroment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Interactable"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.160784, 0.180392, 0.282353, 1)
