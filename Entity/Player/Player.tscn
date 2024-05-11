@@ -131,6 +131,7 @@ fall_state = NodePath("../Fall")
 script = ExtResource("5_mm2jq")
 idle_state = NodePath("../Idle")
 animation_name = "RUNNING"
+move_speed = 10000.0
 
 [node name="Fall" type="Node" parent="StateManager" node_paths=PackedStringArray("idle_state", "move_state")]
 script = ExtResource("6_7bh3u")
