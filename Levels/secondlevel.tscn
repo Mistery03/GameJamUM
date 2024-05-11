@@ -853,7 +853,7 @@ script = ExtResource("1_r1qu8")
 dialogueName = "Dialogue4"
 
 [node name="Player" parent="." instance=ExtResource("3_lmvt6")]
-position = Vector2(1680, 95)
+position = Vector2(1679, 88)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8vuom")
@@ -913,3 +913,9 @@ position = Vector2(14, 220)
 whom = "Doctor"
 scenePath = "res://Scenes/Doctor's room.tscn"
 promptMessage = "'s room(?)"
+
+[node name="Door2" parent="." instance=ExtResource("7_ftjfc")]
+position = Vector2(17, 719)
+whom = "???"
+scenePath = "res://Levels/secondlevelp2.tscn"
+promptMessage = " Dungeon"
