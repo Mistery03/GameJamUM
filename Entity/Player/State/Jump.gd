@@ -18,6 +18,8 @@ var jumpTimeToPeak:float
 var jumpTimeToDescent:float
 
 
+
+
 @onready var jumpVelocity:float = ((2.0 * jumpHeight)/jumpTimeToPeak) * -1.0
 @onready var jumpGravity:float= ((-2.0 * jumpHeight)/(jumpTimeToPeak * jumpTimeToPeak)) * -1.0
 @onready var fallGravity:float= ((-2.0 * jumpHeight)/(jumpTimeToDescent * jumpTimeToDescent)) * -1.0
@@ -45,6 +47,14 @@ func process_physics(delta: float) -> State:
 		elif move_component.axis.x > 0:
 			parent.attackLOS.rotation = -1.5708
 	parent.velocity.x = clamp(parent.velocity.x,-move_speed,move_speed)
+	
+	if parent.cayoteCounter > 0:
+			parent.cayoteCounter -= 1	
+		
+	if parent.jumpBufferCounter > 0:
+		parent.cayoteCounter = 1
+
+	
 	parent.move_and_slide()
 	
 	if parent.is_on_floor():

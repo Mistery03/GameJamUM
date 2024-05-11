@@ -850,7 +850,7 @@ size = Vector2(11.5, 28)
 [node name="secondlevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_lmvt6")]
-position = Vector2(1318, 101)
+position = Vector2(1683, 101)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8vuom")

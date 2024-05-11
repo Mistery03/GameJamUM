@@ -10,6 +10,11 @@ extends Entity
 @onready var camera_movement_component = $cameraMovementComponent
 @onready var attackLOS = $Attack
 
+var jumpBufferCounter:int = 0
+var jumpBufferTime:int = 15
+var cayoteTime:int = 15
+var cayoteCounter:int = 0
+
 var mousePos:Vector2
 var isHit:bool
 

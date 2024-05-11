@@ -13,6 +13,7 @@ func enter() -> void:
 
 func process_physics(delta: float) -> State:
 	parent.velocity.y += jump_state.getGravity()  * delta
+	parent.cayoteCounter = 1
 
 	var movement = move_component.get_movement_direction() * move_speed * delta
 	

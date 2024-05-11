@@ -25,7 +25,8 @@ func process_physics(delta: float) -> State:
 	chase_player(delta, move_state.direction)
 	#chase
 	if !parent.detectPlayer.is_colliding():
-		meme.stop()
+		if !parent.detectPlayer.get_collider() is Player:
+			meme.stop()
 		return move_state
 	
 	if parent.attackPlayer.is_colliding():
