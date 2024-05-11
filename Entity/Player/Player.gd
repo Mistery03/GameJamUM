@@ -8,6 +8,7 @@ extends Entity
 @onready var camera = $Camera
 @onready var move_component = $moveComponent
 @onready var camera_movement_component = $cameraMovementComponent
+@onready var attackLOS = $Attack
 
 var mousePos:Vector2
 

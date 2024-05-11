@@ -28,9 +28,8 @@ func process_physics(delta: float) -> State:
 	
 	if parent.attackPlayer.is_colliding():
 		return attack_state
-	if Input.is_action_pressed("TAUNT"):
+	if parent.isHit:
 		damage_state.prevState = self
-		print(damage_state.prevState)
 		return damage_state
 	
 	return null

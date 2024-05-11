@@ -6,6 +6,8 @@ var fall_state: State
 var idle_state: State
 @export
 var jump_state: State
+@export
+var attack_state: State
 
 func enter() -> void:
 	super()
@@ -14,6 +16,9 @@ func enter() -> void:
 func process_input(event: InputEvent) -> State:
 	if move_component.wants_jump() and parent.is_on_floor():
 		return jump_state
+	if Input.is_action_pressed("ACTION"):
+		attack_state.prevState = self
+		return attack_state
 	return null
 
 func process_physics(delta: float) -> State:	

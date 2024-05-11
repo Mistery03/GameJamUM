@@ -23,6 +23,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 config/name="GamejamUM"
 run/main_scene="res://Levels/IntroLevel.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+run/max_fps=30
 config/icon="res://icon.svg"
 
 [autoload]
@@ -32,9 +33,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Doctor": "res://Dialogic/Characters/Doctor.dch"
+"Doctor": "res://Dialogic/Characters/Doctor.dch",
+"Lovis": "res://Dialogic/Characters/Lovis.dch"
 }
 directories/dtl_directory={
+"Dialogue3": "res://Dialogic/Timelines/Dialogue3.dtl",
 "Doctor": "res://Dialogic/Timelines/Doctor.dtl",
 "Enna": "res://Dialogic/Timelines/Enna.dtl",
 "IntroductionDialogue": "res://Dialogic/Timelines/IntroductionDialogue.dtl"

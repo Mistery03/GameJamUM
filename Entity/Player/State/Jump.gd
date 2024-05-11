@@ -40,6 +40,10 @@ func process_physics(delta: float) -> State:
 	
 	if move_component.get_movement_direction():
 		parent.animation.flip_h = move_component.axis.x < 0
+		if move_component.axis.x < 0:
+			parent.attackLOS.rotation = 1.5708
+		elif move_component.axis.x > 0:
+			parent.attackLOS.rotation = -1.5708
 	parent.velocity.x = clamp(parent.velocity.x,-move_speed,move_speed)
 	parent.move_and_slide()
 	

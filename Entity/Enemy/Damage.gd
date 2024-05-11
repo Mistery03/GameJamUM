@@ -13,6 +13,9 @@ func enter() -> void:
 	super()
 	get_hit(1)
 	print(enemyHP)
+
+func exit()->void:
+	parent.isHit =false
 	
 func process_frame(delta: float) -> State:
 	if enemyHP<=0:

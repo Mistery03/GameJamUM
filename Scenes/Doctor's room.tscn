@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwiyklqts8l83"]
+[gd_scene load_steps=6 format=3 uid="uid://bwiyklqts8l83"]
 
+[ext_resource type="Script" path="res://Scenes/Doctor's room.gd" id="1_p4gd4"]
 [ext_resource type="Texture2D" uid="uid://c3qcc72117sob" path="res://Asset/Spritesheet/doc'sroom.png" id="1_t4occ"]
-[ext_resource type="PackedScene" uid="uid://cfnblrbyg7fgu" path="res://Entity/NPC/Doctor.tscn" id="2_t7guy"]
+[ext_resource type="PackedScene" uid="uid://bdem8e5g7jtru" path="res://Entity/NPC/Doctor.tscn" id="2_t7guy"]
+[ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_dmoiy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ciuc"]
+size = Vector2(1161.5, 128)
 
 [node name="Doctor\'sRoom" type="Node2D"]
+script = ExtResource("1_p4gd4")
+dialogueName = "Doctor"
 
 [node name="Doc\'sroom" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
@@ -12,3 +19,17 @@ texture = ExtResource("1_t4occ")
 
 [node name="Doctor" parent="." instance=ExtResource("2_t7guy")]
 position = Vector2(469, 421)
+
+[node name="Player" parent="." instance=ExtResource("3_dmoiy")]
+position = Vector2(52, 394)
+scale = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(569.25, 581)
+shape = SubResource("RectangleShape2D_7ciuc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 323)
