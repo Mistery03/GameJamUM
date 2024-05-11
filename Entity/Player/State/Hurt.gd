@@ -12,7 +12,7 @@ var prevState:State
 
 func enter() -> void:
 	super()
-	get_hit(self.damage)
+	get_hit(parent.damage)
 
 func exit()->void:
 	parent.isHit =false

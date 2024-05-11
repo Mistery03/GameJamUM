@@ -17,6 +17,7 @@ var cayoteCounter:int = 0
 
 var mousePos:Vector2
 var isHit:bool
+var damage:float
 
 
 func _ready() -> void:

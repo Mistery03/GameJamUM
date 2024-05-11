@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://f6agt7fcxqhs"]
+[gd_scene load_steps=7 format=3 uid="uid://benc7ps5pg0au"]
 
 [ext_resource type="Texture2D" uid="uid://bppfvr5cfv1go" path="res://Asset/Spritesheet/Background_0.png" id="1_lu5pp"]
 [ext_resource type="Texture2D" uid="uid://dxp2h665ymx5x" path="res://Asset/Spritesheet/Background_1.png" id="2_a5vbo"]
