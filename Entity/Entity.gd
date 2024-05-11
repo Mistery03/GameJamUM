@@ -1,6 +1,8 @@
 class_name Entity
 extends CharacterBody2D
 
+@export var maxHealth:float
+
 var currHealth:float = 0
 var currMana:float = 0
 

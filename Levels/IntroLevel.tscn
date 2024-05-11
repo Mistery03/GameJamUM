@@ -422,5 +422,6 @@ texture = ExtResource("4_plllk")
 position = Vector2(158, 158)
 
 [node name="Enemy" parent="." instance=ExtResource("7_t6hxr")]
-position = Vector2(34, 458)
+position = Vector2(52, 458)
 disable_mode = 1
+collision_mask = 3

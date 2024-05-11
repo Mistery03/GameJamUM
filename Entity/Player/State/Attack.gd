@@ -8,6 +8,8 @@ var move_state: State
 var jump_state: State
 @export
 var fall_state: State
+@export
+var damage_state: State
 
 var prevState:State
 
@@ -34,6 +36,10 @@ func process_frame(delta: float) -> State:
 			parent.attackLOS.get_collider().isHit = true
 	else:
 		return idle_state
+	
+	if parent.isHit:
+		damage_state.prevState = self
+		return damage_state
 	
 	return null
 	

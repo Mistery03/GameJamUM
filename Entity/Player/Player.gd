@@ -11,10 +11,12 @@ extends Entity
 @onready var attackLOS = $Attack
 
 var mousePos:Vector2
+var isHit:bool
 
 
 func _ready() -> void:
 	state_manager.init(self,animation,move_component,camera)
+	currHealth = maxHealth
 
 
 func _unhandled_input(event: InputEvent) -> void:
