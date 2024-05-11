@@ -850,9 +850,10 @@ size = Vector2(11.5, 28)
 
 [node name="secondlevel" type="Node2D"]
 script = ExtResource("1_r1qu8")
+dialogueName = "Dialogue4"
 
 [node name="Player" parent="." instance=ExtResource("3_lmvt6")]
-position = Vector2(1683, 101)
+position = Vector2(888, 654)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8vuom")
