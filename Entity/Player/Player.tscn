@@ -107,6 +107,7 @@ height = 36.0
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 collision_layer = 2
+collision_mask = 17
 script = ExtResource("1_h466v")
 camera_speed = 8000.0
 
@@ -121,7 +122,7 @@ position = Vector2(-2, 21)
 shape = SubResource("CapsuleShape2D_30wm4")
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
 
 [node name="StateManager" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_lnf71")
