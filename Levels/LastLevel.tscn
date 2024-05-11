@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://benc7ps5pg0au"]
+[gd_scene load_steps=8 format=3 uid="uid://f6agt7fcxqhs"]
 
 [ext_resource type="Texture2D" uid="uid://bppfvr5cfv1go" path="res://Asset/Spritesheet/Background_0.png" id="1_lu5pp"]
 [ext_resource type="Texture2D" uid="uid://dxp2h665ymx5x" path="res://Asset/Spritesheet/Background_1.png" id="2_a5vbo"]
 [ext_resource type="Texture2D" uid="uid://couh20pfkyqxw" path="res://Asset/Spritesheet/free.png" id="3_mhn5h"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="4_t1pjn"]
+[ext_resource type="PackedScene" uid="uid://cabvdkuyhhlgh" path="res://Entity/Boss/boss.tscn" id="5_d5wc7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_met41"]
 texture = ExtResource("3_mhn5h")
@@ -846,4 +847,7 @@ layer_1/name = "back decor"
 layer_1/tile_data = PackedInt32Array(2228240, 1245184, 4, 2293776, 1245184, 5, 2228241, 1310720, 4, 2293777, 1310720, 5, 2228242, 1376256, 4, 2293778, 1376256, 5, 2228243, 1441792, 4, 2293779, 1441792, 5, 2228244, 1245184, 4, 2293780, 1245184, 5, 2228245, 1310720, 4, 2293781, 1310720, 5, 2228246, 1376256, 4, 2293782, 1376256, 5, 2228247, 1441792, 4, 2293783, 1441792, 5, 2228248, 1245184, 4, 2293784, 1245184, 5, 2228249, 1310720, 4, 2293785, 1310720, 5, 2228250, 1376256, 4, 2293786, 1376256, 5, 2228251, 1441792, 4, 2293787, 1441792, 5, 2228252, 1245184, 4, 2293788, 1245184, 5, 2228253, 1310720, 4, 2293789, 1310720, 5, 2228254, 1376256, 4, 2293790, 1376256, 5, 2228255, 1441792, 4, 2293791, 1441792, 5, 2228256, 1310720, 2, 2293792, 1310720, 3, 2228257, 1376256, 2, 2293793, 1376256, 3, 2228258, 1310720, 2, 2293794, 1310720, 3, 2228259, 1376256, 2, 2293795, 1376256, 3, 2228260, 1310720, 2, 2293796, 1310720, 3, 2228261, 1376256, 2, 2293797, 1376256, 3, 2228262, 1310720, 2, 2293798, 1310720, 3, 2228263, 1376256, 2, 2293799, 1376256, 3, 2228264, 1310720, 2, 2293800, 1310720, 3, 2228265, 1376256, 2, 2293801, 1376256, 3, 2228266, 1310720, 2, 2293802, 1310720, 3, 2228267, 1376256, 2, 2293803, 1376256, 3, 2228268, 1310720, 2, 2293804, 1310720, 3, 2228269, 1376256, 2, 2293805, 1376256, 3, 2228270, 1310720, 2, 2293806, 1310720, 3, 2228271, 1376256, 2, 2293807, 1376256, 3, 2228272, 1310720, 2, 2293808, 1310720, 3, 2228273, 1376256, 2, 2293809, 1376256, 3)
 
 [node name="Player" parent="." instance=ExtResource("4_t1pjn")]
-position = Vector2(74, 528)
+position = Vector2(314, 530)
+
+[node name="Boss" parent="." instance=ExtResource("5_d5wc7")]
+position = Vector2(583, 514)
