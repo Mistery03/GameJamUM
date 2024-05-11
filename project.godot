@@ -21,7 +21,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="GamejamUM"
-run/main_scene="res://Entity/Player/Player.tscn"
+run/main_scene="res://Levels/IntroLevel.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -10,13 +10,27 @@ var move_state: State
 
 @export
 var jump_force: float = 700.0
+@export 
+var jumpHeight:float
+@export 
+var jumpTimeToPeak:float
+@export 
+var jumpTimeToDescent:float
+
+
+@onready var jumpVelocity:float = ((2.0 * jumpHeight)/jumpTimeToPeak) * -1.0
+@onready var jumpGravity:float= ((-2.0 * jumpHeight)/(jumpTimeToPeak * jumpTimeToPeak)) * -1.0
+@onready var fallGravity:float= ((-2.0 * jumpHeight)/(jumpTimeToDescent * jumpTimeToDescent)) * -1.0
+
+func getGravity()->float:
+	return jumpGravity if parent.velocity.y < 0.0 else fallGravity
 
 func enter() -> void:
 	super()
-	parent.velocity.y = -jump_force
+	parent.velocity.y = jumpVelocity
 
 func process_physics(delta: float) -> State:
-	parent.velocity.y += gravity * delta
+	parent.velocity.y += parent.gravity * delta
 	
 	if parent.velocity.y > 0:
 		return fall_state
@@ -24,7 +38,7 @@ func process_physics(delta: float) -> State:
 	parent.velocity.x = move_component.get_movement_direction().x * move_speed * delta
 	
 	if move_component.get_movement_direction():
-		parent.sprite.flip_h = move_component.axis.x < 0
+		parent.animation.flip_h = move_component.axis.x < 0
 	parent.velocity.x = clamp(parent.velocity.x,-move_speed,move_speed)
 	parent.move_and_slide()
 	
