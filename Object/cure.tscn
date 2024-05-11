@@ -10,6 +10,8 @@ atlas = ExtResource("1_uilkj")
 region = Rect2(3592, 0, 208, 200)
 
 [node name="Cure" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8uvma")
