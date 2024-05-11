@@ -40,7 +40,6 @@ func process_physics(delta: float) -> State:
 	if parent.detectPlayer.is_colliding():
 		if parent.detectPlayer.get_collider() is Player:
 			meme.play()
-			
 			return chase_state
 	if parent.isHit:
 		damage_state.prevState = self

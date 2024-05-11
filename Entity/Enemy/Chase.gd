@@ -9,6 +9,7 @@ var attack_state: State
 var damage_state:State
  
 @onready var attack = $"../../Attack"
+@onready var meme = $"../../AudioStreamPlayer2D"
 
 
 func enter() -> void:
@@ -24,6 +25,7 @@ func process_physics(delta: float) -> State:
 	chase_player(delta, move_state.direction)
 	#chase
 	if !parent.detectPlayer.is_colliding():
+		meme.stop()
 		return move_state
 	
 	if parent.attackPlayer.is_colliding():
