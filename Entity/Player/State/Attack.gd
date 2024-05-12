@@ -35,6 +35,10 @@ func process_frame(delta: float) -> State:
 		if parent.attackLOS.get_collider() is Enemy:
 			parent.attackLOS.get_collider().isHit = true
 			parent.attackLOS.get_collider().damage = 10
+		elif parent.attackLOS.get_collider() is Boss:
+			parent.attackLOS.get_collider().isHit = true
+			parent.attackLOS.get_collider().damage = 15
+			
 	else:
 		return idle_state
 	

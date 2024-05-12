@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwiyklqts8l83"]
+[gd_scene load_steps=7 format=3 uid="uid://bwiyklqts8l83"]
 
 [ext_resource type="Script" path="res://Scenes/Doctor's room.gd" id="1_p4gd4"]
 [ext_resource type="Texture2D" uid="uid://c3qcc72117sob" path="res://Asset/Spritesheet/doc'sroom.png" id="1_t4occ"]
 [ext_resource type="PackedScene" uid="uid://bdem8e5g7jtru" path="res://Entity/NPC/Doctor.tscn" id="2_t7guy"]
 [ext_resource type="PackedScene" uid="uid://cn2gpadmmp748" path="res://Entity/Player/Player.tscn" id="3_dmoiy"]
+[ext_resource type="PackedScene" uid="uid://6esvaxm240mf" path="res://Object/door.tscn" id="5_w4vel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ciuc"]
 size = Vector2(1161.5, 128)
@@ -33,3 +34,10 @@ shape = SubResource("RectangleShape2D_7ciuc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(574, 323)
+
+[node name="Door" parent="." instance=ExtResource("5_w4vel")]
+position = Vector2(56, 427)
+scale = Vector2(2, 2)
+whom = "???"
+scenePath = "res://Levels/secondlevel.tscn"
+promptMessage = "Dungeon"

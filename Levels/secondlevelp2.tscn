@@ -502,6 +502,21 @@ sources/2 = SubResource("TileSetAtlasSource_imddv")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2cw7c"]
 size = Vector2(8.5, 30.5)
 
+[sub_resource type="Animation" id="Animation_attb2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(73, 148)]
+}
+
 [sub_resource type="Animation" id="Animation_nt1td"]
 resource_name = "VerticalMovement"
 length = 6.0
@@ -516,21 +531,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(73, 148), Vector2(73, 300), Vector2(73, 500), Vector2(73, 500), Vector2(73, 600), Vector2(73, 148)]
-}
-
-[sub_resource type="Animation" id="Animation_attb2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(73, 148)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q7t48"]
@@ -596,4 +596,4 @@ scenePath = "res://Levels/LastLevel.tscn"
 promptMessage = "Dungeon"
 
 [node name="Player" parent="." instance=ExtResource("7_s18il")]
-position = Vector2(935, 611)
+position = Vector2(1132, 106)

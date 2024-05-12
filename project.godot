@@ -135,6 +135,7 @@ ACTION={
 2d_physics/layer_4="NPC"
 2d_physics/layer_5="Platform"
 2d_physics/layer_6="Cure"
+2d_physics/layer_7="Boss"
 
 [rendering]
 

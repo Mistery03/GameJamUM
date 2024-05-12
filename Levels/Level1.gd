@@ -12,6 +12,7 @@ var playerPrevPos:Vector2
 func _ready():
 	map_limits = tile_map.get_used_rect()
 	sister.dialogueName = dialogueName
+	player.currentScene = "res://Levels/Level1.tscn"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

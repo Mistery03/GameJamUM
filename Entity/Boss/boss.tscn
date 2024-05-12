@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cabvdkuyhhlgh"]
+[gd_scene load_steps=26 format=3 uid="uid://eg4btx5kur06"]
 
 [ext_resource type="Script" path="res://Entity/Boss/Boss.gd" id="1_fs0ct"]
 [ext_resource type="Script" path="res://Entity/Enemy/RayCasr.gd" id="2_tcqnr"]
@@ -138,12 +138,12 @@ animations = [{
 size = Vector2(172, 147)
 
 [node name="Boss" type="CharacterBody2D"]
-collision_layer = 7
+collision_layer = 64
 collision_mask = 7
 script = ExtResource("1_fs0ct")
 
 [node name="Attack" type="RayCast2D" parent="."]
-target_position = Vector2(-130, 40)
+target_position = Vector2(-130, 30)
 collision_mask = 7
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

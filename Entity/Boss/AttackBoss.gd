@@ -27,9 +27,15 @@ func process_physics(delta: float) -> State:
 	parent.velocity.y += parent.gravity * delta
 	
 	if parent.attackPlayer.is_colliding():
-		print("attacking")
+		if parent.attackPlayer.get_collider() is Player:
+			parent.attackPlayer.get_collider().isHit = true
+			parent.attackPlayer.get_collider().damage = 0
 	else:
 		return move_state
+	
+	if parent.isHit:
+		damage.prevState = self
+		return damage
 		
 	
 

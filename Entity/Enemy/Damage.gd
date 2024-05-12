@@ -26,5 +26,6 @@ func process_frame(delta: float) -> State:
 func get_hit(damage: int):
 	enemyHP -= damage
 	enemyHP = max(enemyHP, 0) # Ensure health doesn't go negative
+	print(enemyHP)
 	
 		
